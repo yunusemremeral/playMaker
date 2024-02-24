@@ -8,7 +8,9 @@ const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
-app.use(cors()); // CORS middleware
+app.use(cors({
+  origin: '*'
+}));
 
 app.use(bodyParser.json());
 
