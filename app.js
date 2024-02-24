@@ -2,8 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+const cors = require('cors'); // CORS middleware
+
 const app = express();
 const PORT = 3000;
+
+app.use(bodyParser.json());
+app.use(cors()); // CORS middleware
 
 app.use(bodyParser.json());
 
